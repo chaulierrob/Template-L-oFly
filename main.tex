@@ -1,0 +1,79 @@
+\documentclass[11pt,twoside,a4paper]{report}
+
+\usepackage[english,francais]{babel}
+\usepackage[latin1, utf8]{inputenc}
+\usepackage[pdftex]{graphicx}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{lmodern}
+\usepackage[french]{varioref}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage[labelfont=bf,textfont=it]{caption}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{array}
+\usepackage{placeins}
+\usepackage{cancel}
+\usepackage{hyperref}
+\usepackage{lscape}
+\usepackage{avant}
+
+\usepackage[T1]{fontenc}
+\usepackage[defaultfam, light, tabular, lining]{montserrat}
+\renewcommand*\oldstylenums[1]{{\fontfamily{Montserrat-TOsF}\selectfont #1}}
+
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage[explicit]{titlesec}
+\usepackage{lmodern}
+\usepackage{lipsum}
+\usepackage{ragged2e}
+
+\definecolor{bleu}{HTML}{374472}
+\definecolor{blanc}{HTML}{ffffff}
+\definecolor{gris}{HTML}{666666}
+
+\newcommand{\Hline}{\textcolor{bleu}{\noindent \rule{\linewidth}{0.5mm}} }
+
+\newcommand{\Cline}
+{
+\begin{center}
+\textcolor{bleu}{\noindent \rule{3cm}{0.5mm}}
+\end{center}
+}
+
+\newcommand{\subpart}[1]
+{
+\begin{center}
+    \Hline 
+    \break
+    \textbf{#1}
+    \break
+\end{center}
+}
+
+
+
+\titleformat{\chapter}[display] {\fontsize{18pt}{14pt}\Huge \raggedleft}
+{\textcolor{bleu}{Partie \thechapter \ : #1 \Hline}}{20pt}{\Huge}
+\titleformat{name=\chapter,numberless}[display] {\fontsize{18pt}{14pt}\Huge \raggedleft}
+{\textcolor{bleu}{#1 \Hline}}{20pt}{\Huge}
+
+
+\begin{document}
+\justifying
+
+\input{first_page.tex}
+
+\tableofcontents
+
+\newpage
+
+\input{partie1.tex}
+
+\newpage
+
+
+\end{document}
